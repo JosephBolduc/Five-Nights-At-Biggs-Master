@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ixg50ec7mbe5"
-path="res://.godot/imported/open off.png-2b28358ef9b66642c4927ab9f332ad49.ctex"
+path="res://.godot/imported/open off.png-a2973f818a56014ccb550ff92c49220b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resource fin/left door/open off.png"
-dest_files=["res://.godot/imported/open off.png-2b28358ef9b66642c4927ab9f332ad49.ctex"]
+source_file="res://Resource/left door/open off.png"
+dest_files=["res://.godot/imported/open off.png-a2973f818a56014ccb550ff92c49220b.ctex"]
 
 [params]
 

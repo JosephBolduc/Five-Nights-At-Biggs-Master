@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bcqq6u46ylujw"
-path="res://.godot/imported/light buzz.wav-73450be0216ce66aacbc5bb1158e301b.sample"
+path="res://.godot/imported/light buzz.wav-ab91a8513cee6e4b9c8efd7fe9be62fe.sample"
 
 [deps]
 
-source_file="res://resource fin/~audio~/light buzz.wav"
-dest_files=["res://.godot/imported/light buzz.wav-73450be0216ce66aacbc5bb1158e301b.sample"]
+source_file="res://Resource/~audio~/light buzz.wav"
+dest_files=["res://.godot/imported/light buzz.wav-ab91a8513cee6e4b9c8efd7fe9be62fe.sample"]
 
 [params]
 

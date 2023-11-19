@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7m7gh4niqn7k"
-path="res://.godot/imported/mute call.png-c77a455b7f1d568410a179592651b6ac.ctex"
+path="res://.godot/imported/mute call.png-d3b41e6ea0a5c3ea9a15473c7c416efd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resource fin/ui/mute call.png"
-dest_files=["res://.godot/imported/mute call.png-c77a455b7f1d568410a179592651b6ac.ctex"]
+source_file="res://Resource/ui/mute call.png"
+dest_files=["res://.godot/imported/mute call.png-d3b41e6ea0a5c3ea9a15473c7c416efd.ctex"]
 
 [params]
 

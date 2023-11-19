@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dd6027wwrvjy2"
-path="res://.godot/imported/67.png-f811308d31b6aa3fe31441ea41c96a9f.ctex"
+path="res://.godot/imported/67.png-8a7d61b8b6dd46135ee0765db736cf3c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resource fin/right hall/67.png"
-dest_files=["res://.godot/imported/67.png-f811308d31b6aa3fe31441ea41c96a9f.ctex"]
+source_file="res://Resource/right hall/67.png"
+dest_files=["res://.godot/imported/67.png-8a7d61b8b6dd46135ee0765db736cf3c.ctex"]
 
 [params]
 

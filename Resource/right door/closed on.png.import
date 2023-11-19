@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b10ynn3010gpq"
-path="res://.godot/imported/closed on.png-862af25c6ecfe42bf7d2f90cec7d6466.ctex"
+path="res://.godot/imported/closed on.png-43e075d8ee511238a21e3a0fa51dd63b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resource fin/right door/closed on.png"
-dest_files=["res://.godot/imported/closed on.png-862af25c6ecfe42bf7d2f90cec7d6466.ctex"]
+source_file="res://Resource/right door/closed on.png"
+dest_files=["res://.godot/imported/closed on.png-43e075d8ee511238a21e3a0fa51dd63b.ctex"]
 
 [params]
 

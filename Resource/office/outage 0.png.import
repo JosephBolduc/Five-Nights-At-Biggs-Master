@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2x4kwuh2643g"
-path="res://.godot/imported/outage 0.png-2ce29495336a0089be9e55033698febb.ctex"
+path="res://.godot/imported/outage 0.png-7ea2030a4d5c47fd34feecb28fb758bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resource fin/office/outage 0.png"
-dest_files=["res://.godot/imported/outage 0.png-2ce29495336a0089be9e55033698febb.ctex"]
+source_file="res://Resource/office/outage 0.png"
+dest_files=["res://.godot/imported/outage 0.png-7ea2030a4d5c47fd34feecb28fb758bb.ctex"]
 
 [params]
 

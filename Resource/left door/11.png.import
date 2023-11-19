@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8wm338v8b66v"
-path="res://.godot/imported/11.png-d07d6176177cab7ed7fee9bb7cb481ea.ctex"
+path="res://.godot/imported/11.png-f08c46a55393b921b3afa69d9b1a506f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resource fin/left door/11.png"
-dest_files=["res://.godot/imported/11.png-d07d6176177cab7ed7fee9bb7cb481ea.ctex"]
+source_file="res://Resource/left door/11.png"
+dest_files=["res://.godot/imported/11.png-f08c46a55393b921b3afa69d9b1a506f.ctex"]
 
 [params]
 

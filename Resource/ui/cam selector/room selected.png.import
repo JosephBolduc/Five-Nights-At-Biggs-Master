@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c66yeg25i2h5q"
-path="res://.godot/imported/room selected.png-19512e5211fa63fe6a98ee1e2f5ca808.ctex"
+path="res://.godot/imported/room selected.png-10d09416847342d1d489ff7b51a156cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resource fin/ui/cam selector/room selected.png"
-dest_files=["res://.godot/imported/room selected.png-19512e5211fa63fe6a98ee1e2f5ca808.ctex"]
+source_file="res://Resource/ui/cam selector/room selected.png"
+dest_files=["res://.godot/imported/room selected.png-10d09416847342d1d489ff7b51a156cd.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1py726jikpnq"
-path="res://.godot/imported/left armed.png-54448c98d0fc1a02e545afbb2e5b9796.ctex"
+path="res://.godot/imported/left armed.png-c4452bdbb08b930a86e138ff8231d618.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resource fin/office/left armed.png"
-dest_files=["res://.godot/imported/left armed.png-54448c98d0fc1a02e545afbb2e5b9796.ctex"]
+source_file="res://Resource/office/left armed.png"
+dest_files=["res://.godot/imported/left armed.png-c4452bdbb08b930a86e138ff8231d618.ctex"]
 
 [params]
 

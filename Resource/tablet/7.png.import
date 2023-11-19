@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crpg15x31f2m"
-path="res://.godot/imported/7.png-e54a3246cdd83ac2cb3e8163807d9589.ctex"
+path="res://.godot/imported/7.png-e349cdb08554bf5107930e30dee8f7a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resource fin/tablet/7.png"
-dest_files=["res://.godot/imported/7.png-e54a3246cdd83ac2cb3e8163807d9589.ctex"]
+source_file="res://Resource/tablet/7.png"
+dest_files=["res://.godot/imported/7.png-e349cdb08554bf5107930e30dee8f7a8.ctex"]
 
 [params]
 

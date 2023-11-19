@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://bq1ae1ed7kphb"]
 
-[ext_resource type="Texture2D" uid="uid://c66yeg25i2h5q" path="res://resource fin/ui/cam selector/room selected.png" id="1_eoq5v"]
+[ext_resource type="Texture2D" uid="uid://c66yeg25i2h5q" path="res://Resource/ui/cam selector/room selected.png" id="1_eoq5v"]
 [ext_resource type="Script" path="res://Scripts/cameraButton.cs" id="1_pfv6y"]
-[ext_resource type="Texture2D" uid="uid://huqkcrh0qv6a" path="res://resource fin/ui/cam selector/room unselected.png" id="2_2crly"]
-[ext_resource type="FontFile" uid="uid://73am07db46vt" path="res://resource fin/fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf" id="3_x0ljt"]
+[ext_resource type="Texture2D" uid="uid://huqkcrh0qv6a" path="res://Resource/ui/cam selector/room unselected.png" id="2_2crly"]
+[ext_resource type="FontFile" uid="uid://73am07db46vt" path="res://Resource/fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf" id="3_x0ljt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_we6f6"]
 animations = [{

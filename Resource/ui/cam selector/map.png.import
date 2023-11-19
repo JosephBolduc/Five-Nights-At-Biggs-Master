@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bufba1eqp2onx"
-path="res://.godot/imported/map.png-3c4d88e713837f36c8091c75d6f062c7.ctex"
+path="res://.godot/imported/map.png-04eddd5c66e6a771d663dca2c82c4eb6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resource fin/ui/cam selector/map.png"
-dest_files=["res://.godot/imported/map.png-3c4d88e713837f36c8091c75d6f062c7.ctex"]
+source_file="res://Resource/ui/cam selector/map.png"
+dest_files=["res://.godot/imported/map.png-04eddd5c66e6a771d663dca2c82c4eb6.ctex"]
 
 [params]
 

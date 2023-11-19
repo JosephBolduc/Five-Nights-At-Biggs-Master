@@ -1,14 +1,14 @@
 [gd_scene load_steps=11 format=3 uid="uid://dbji43djqyhos"]
 
 [ext_resource type="Script" path="res://Scripts/PowerIndicators/PowerIndicators.cs" id="1_ik1ho"]
-[ext_resource type="Texture2D" uid="uid://bbc1e3mmyidg6" path="res://resource fin/ui/usage 1.png" id="2_b2n84"]
-[ext_resource type="Texture2D" uid="uid://cvcmi8aa0axoc" path="res://resource fin/ui/usage 2.png" id="3_gch2c"]
-[ext_resource type="Texture2D" uid="uid://cfvdpwej0lkg4" path="res://resource fin/ui/usage 3.png" id="4_w4aub"]
-[ext_resource type="Texture2D" uid="uid://d0kkr0fxsm3ta" path="res://resource fin/ui/usage 4.png" id="5_ly25u"]
-[ext_resource type="Texture2D" uid="uid://bpgbgo3qhm0qi" path="res://resource fin/ui/usage 5.png" id="6_bctca"]
-[ext_resource type="Texture2D" uid="uid://di6cvec3wrsge" path="res://resource fin/ui/usage.png" id="7_4lgak"]
-[ext_resource type="FontFile" uid="uid://i6qfv6jn3fdo" path="res://resource fin/fonts/pixeloid-font/PixeloidMono-d94EV.ttf" id="8_kd2ul"]
-[ext_resource type="Texture2D" uid="uid://bhf4oolwxu6f4" path="res://resource fin/ui/power left.png" id="9_ongym"]
+[ext_resource type="Texture2D" uid="uid://bbc1e3mmyidg6" path="res://Resource/ui/usage 1.png" id="2_b2n84"]
+[ext_resource type="Texture2D" uid="uid://cvcmi8aa0axoc" path="res://Resource/ui/usage 2.png" id="3_gch2c"]
+[ext_resource type="Texture2D" uid="uid://cfvdpwej0lkg4" path="res://Resource/ui/usage 3.png" id="4_w4aub"]
+[ext_resource type="Texture2D" uid="uid://d0kkr0fxsm3ta" path="res://Resource/ui/usage 4.png" id="5_ly25u"]
+[ext_resource type="Texture2D" uid="uid://bpgbgo3qhm0qi" path="res://Resource/ui/usage 5.png" id="6_bctca"]
+[ext_resource type="Texture2D" uid="uid://di6cvec3wrsge" path="res://Resource/ui/usage.png" id="7_4lgak"]
+[ext_resource type="FontFile" uid="uid://i6qfv6jn3fdo" path="res://Resource/fonts/pixeloid-font/PixeloidMono-d94EV.ttf" id="8_kd2ul"]
+[ext_resource type="Texture2D" uid="uid://bhf4oolwxu6f4" path="res://Resource/ui/power left.png" id="9_ongym"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mqpu1"]
 animations = [{
