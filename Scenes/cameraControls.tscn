@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://44v1yik1xsyx"]
+
+[ext_resource type="Texture2D" uid="uid://bufba1eqp2onx" path="res://resource fin/ui/cam selector/map.png" id="1_0uwte"]
+
+[node name="Camera Controls" type="Node2D"]
+
+[node name="Map" type="Sprite2D" parent="."]
+texture = ExtResource("1_0uwte")

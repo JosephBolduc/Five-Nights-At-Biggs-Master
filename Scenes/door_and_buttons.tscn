@@ -1,0 +1,277 @@
+[gd_scene load_steps=46 format=3 uid="uid://bpsha8fcvcpan"]
+
+[ext_resource type="Script" path="res://Scripts/doorAndButtons/door_and_buttons.cs" id="1_21wfm"]
+[ext_resource type="Texture2D" uid="uid://b10ynn3010gpq" path="res://resource fin/right door/closed on.png" id="1_67xw0"]
+[ext_resource type="Texture2D" uid="uid://dp7d5gm38mhqw" path="res://resource fin/right door/open on.png" id="2_4mjlr"]
+[ext_resource type="Texture2D" uid="uid://daq5yxt5fnqsv" path="res://resource fin/right door/open off.png" id="3_q8r4f"]
+[ext_resource type="Texture2D" uid="uid://bg8eern7j0lhk" path="res://resource fin/right door/closed off.png" id="4_6gw7o"]
+[ext_resource type="Texture2D" uid="uid://bcifpkyi2r8i1" path="res://resource fin/left door/closed on.png" id="5_osmta"]
+[ext_resource type="Texture2D" uid="uid://bh33b661sohss" path="res://resource fin/left door/open on.png" id="6_n6jun"]
+[ext_resource type="Texture2D" uid="uid://ixg50ec7mbe5" path="res://resource fin/left door/open off.png" id="7_3qwjn"]
+[ext_resource type="Texture2D" uid="uid://co5cig8h1m2fu" path="res://resource fin/left door/closed off.png" id="8_l25ca"]
+[ext_resource type="Texture2D" uid="uid://bxim4030dnt7f" path="res://resource fin/left door/0.png" id="9_ja2lh"]
+[ext_resource type="Texture2D" uid="uid://busmlqgwc315k" path="res://resource fin/left door/1.png" id="10_kxxup"]
+[ext_resource type="Texture2D" uid="uid://bjmvbbnvaljct" path="res://resource fin/left door/2.png" id="11_m22px"]
+[ext_resource type="Texture2D" uid="uid://plc8myt34rge" path="res://resource fin/left door/3.png" id="12_bk7e4"]
+[ext_resource type="Texture2D" uid="uid://dp8rgayr0rl31" path="res://resource fin/left door/4.png" id="13_bnhkj"]
+[ext_resource type="Texture2D" uid="uid://6pppf430nmr2" path="res://resource fin/left door/5.png" id="14_lbd0n"]
+[ext_resource type="Texture2D" uid="uid://7lu81ucic8ch" path="res://resource fin/left door/6.png" id="15_fuikr"]
+[ext_resource type="Texture2D" uid="uid://rc3osxece5gx" path="res://resource fin/left door/7.png" id="16_psm2c"]
+[ext_resource type="Texture2D" uid="uid://bg2h8wh7flara" path="res://resource fin/left door/8.png" id="17_nym10"]
+[ext_resource type="Texture2D" uid="uid://dndtajq3fsn5b" path="res://resource fin/left door/9.png" id="18_ct2kj"]
+[ext_resource type="Texture2D" uid="uid://du4rnhib3qqoc" path="res://resource fin/left door/10.png" id="19_8hwtp"]
+[ext_resource type="Texture2D" uid="uid://b8wm338v8b66v" path="res://resource fin/left door/11.png" id="20_ylkr8"]
+[ext_resource type="Texture2D" uid="uid://tpcxo0k66qw" path="res://resource fin/left door/12.png" id="21_wy23d"]
+[ext_resource type="Texture2D" uid="uid://dgpg2g3kka0gq" path="res://resource fin/left door/13.png" id="22_akh3k"]
+[ext_resource type="Texture2D" uid="uid://7q2nr7gi1tmh" path="res://resource fin/left door/14.png" id="23_yxdjy"]
+[ext_resource type="Texture2D" uid="uid://d1nhevrmyrh80" path="res://resource fin/right door/0.png" id="24_w2bw8"]
+[ext_resource type="Texture2D" uid="uid://dmh1xrbavg0os" path="res://resource fin/right door/1.png" id="25_jpx4p"]
+[ext_resource type="Texture2D" uid="uid://dia2oy2xw1sxa" path="res://resource fin/right door/2.png" id="26_5nlfj"]
+[ext_resource type="Texture2D" uid="uid://kvc542qado2e" path="res://resource fin/right door/3.png" id="27_hwx4g"]
+[ext_resource type="Texture2D" uid="uid://efn4aiqh0lv3" path="res://resource fin/right door/4.png" id="28_dp1hs"]
+[ext_resource type="Texture2D" uid="uid://cf2mo8hhj4vb" path="res://resource fin/right door/5.png" id="29_shgir"]
+[ext_resource type="Texture2D" uid="uid://cwhnwsvcgbi2n" path="res://resource fin/right door/6.png" id="30_a16rp"]
+[ext_resource type="Texture2D" uid="uid://vccx0r11urjs" path="res://resource fin/right door/7.png" id="31_ile87"]
+[ext_resource type="Texture2D" uid="uid://di4kdi1v5xxff" path="res://resource fin/right door/8.png" id="32_8om4q"]
+[ext_resource type="Texture2D" uid="uid://chchuk7rwok0o" path="res://resource fin/right door/9.png" id="33_jtgbm"]
+[ext_resource type="Texture2D" uid="uid://fiihcfitw0fw" path="res://resource fin/right door/10.png" id="34_3k5j1"]
+[ext_resource type="Texture2D" uid="uid://du6r0krjcohx7" path="res://resource fin/right door/11.png" id="35_khq4s"]
+[ext_resource type="Texture2D" uid="uid://bxd4q16xqqy6j" path="res://resource fin/right door/12.png" id="36_skp7m"]
+[ext_resource type="Texture2D" uid="uid://eueaeuy2y1cr" path="res://resource fin/right door/13.png" id="37_epg27"]
+[ext_resource type="Texture2D" uid="uid://cat7rpkqlwl4k" path="res://resource fin/right door/14.png" id="38_p6sd3"]
+[ext_resource type="AudioStream" uid="uid://bcqq6u46ylujw" path="res://resource fin/~audio~/light buzz.wav" id="40_ciohs"]
+[ext_resource type="AudioStream" uid="uid://mrf4oln2445b" path="res://resource fin/~audio~/door close.wav" id="41_7u151"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yi8bk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_osmta")
+}],
+"loop": true,
+"name": &"both",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_n6jun")
+}],
+"loop": true,
+"name": &"bottom",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_3qwjn")
+}],
+"loop": false,
+"name": &"none",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_l25ca")
+}],
+"loop": true,
+"name": &"top",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fg6ih"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_67xw0")
+}],
+"loop": true,
+"name": &"both",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4mjlr")
+}],
+"loop": true,
+"name": &"bottom",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_q8r4f")
+}],
+"loop": false,
+"name": &"none",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_6gw7o")
+}],
+"loop": true,
+"name": &"top",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5w83v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_ja2lh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kxxup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_m22px")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_bk7e4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_bnhkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_lbd0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_fuikr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_psm2c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_nym10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ct2kj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_8hwtp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ylkr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_wy23d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_akh3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_yxdjy")
+}],
+"loop": false,
+"name": &"default",
+"speed": 50.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_prtkj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_w2bw8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_jpx4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_5nlfj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_hwx4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_dp1hs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_shgir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_a16rp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ile87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_8om4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_jtgbm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_3k5j1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_khq4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_skp7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_epg27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_p6sd3")
+}],
+"loop": false,
+"name": &"default",
+"speed": 50.0
+}]
+
+[node name="DoorAndButtons" type="Node2D"]
+script = ExtResource("1_21wfm")
+
+[node name="Left_Buttons" type="Node2D" parent="."]
+position = Vector2(-760, 85)
+
+[node name="buttons" type="AnimatedSprite2D" parent="Left_Buttons"]
+sprite_frames = SubResource("SpriteFrames_yi8bk")
+animation = &"none"
+autoplay = "none"
+
+[node name="door_button" type="Area2D" parent="Left_Buttons"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Left_Buttons/door_button"]
+polygon = PackedVector2Array(-16, -72, 23, -69, 23, -17, -17, -17)
+
+[node name="light_button" type="Area2D" parent="Left_Buttons"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Left_Buttons/light_button"]
+polygon = PackedVector2Array(-16, 9, 22, 9, 22, 60, -17, 64)
+
+[node name="Right_Buttons" type="Node2D" parent="."]
+position = Vector2(735.605, 85)
+
+[node name="buttons" type="AnimatedSprite2D" parent="Right_Buttons"]
+sprite_frames = SubResource("SpriteFrames_fg6ih")
+animation = &"none"
+autoplay = "none"
+
+[node name="door_button" type="Area2D" parent="Right_Buttons"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Right_Buttons/door_button"]
+polygon = PackedVector2Array(16.395, -72, -22.605, -69, -22.605, -17, 17.395, -17)
+
+[node name="light_button" type="Area2D" parent="Right_Buttons"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Right_Buttons/light_button"]
+polygon = PackedVector2Array(-22.605, 9, 15.395, 9, 16.395, 64, -22.605, 61)
+
+[node name="Left_Door" type="AnimatedSprite2D" parent="."]
+position = Vector2(-600, 0)
+sprite_frames = SubResource("SpriteFrames_5w83v")
+
+[node name="Right_Door" type="AnimatedSprite2D" parent="."]
+position = Vector2(600, 0)
+sprite_frames = SubResource("SpriteFrames_prtkj")
+
+[node name="LightPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("40_ciohs")
+
+[node name="DoorPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("41_7u151")
+
+[connection signal="input_event" from="Left_Buttons/door_button" to="." method="ButtonInputEvent" binds= [1]]
+[connection signal="input_event" from="Left_Buttons/light_button" to="." method="ButtonInputEvent" binds= [2]]
+[connection signal="input_event" from="Right_Buttons/door_button" to="." method="ButtonInputEvent" binds= [3]]
+[connection signal="input_event" from="Right_Buttons/light_button" to="." method="ButtonInputEvent" binds= [4]]

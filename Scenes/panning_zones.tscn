@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://dptrhfm3j7ccs"]
+
+[ext_resource type="Script" path="res://Scripts/panningzone/panning_zones.cs" id="1_aeemn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_meg56"]
+size = Vector2(180, 720)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uy787"]
+size = Vector2(240, 720)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11i27"]
+size = Vector2(180, 720)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mpbu"]
+size = Vector2(240, 720)
+
+[node name="PanningZones" type="Node"]
+script = ExtResource("1_aeemn")
+
+[node name="left_fast" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left_fast"]
+visible = false
+position = Vector2(-550, 0)
+shape = SubResource("RectangleShape2D_meg56")
+
+[node name="left_slow" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left_slow"]
+visible = false
+position = Vector2(-340, 0)
+shape = SubResource("RectangleShape2D_uy787")
+
+[node name="right_fast" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right_fast"]
+visible = false
+position = Vector2(550, 0)
+shape = SubResource("RectangleShape2D_11i27")
+
+[node name="right_slow" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right_slow"]
+visible = false
+position = Vector2(340, 0)
+shape = SubResource("RectangleShape2D_7mpbu")
+
+[connection signal="mouse_entered" from="left_fast" to="." method="MouseEntered" binds= [-2]]
+[connection signal="mouse_exited" from="left_fast" to="." method="MouseLeft" binds= [-2]]
+[connection signal="mouse_entered" from="left_slow" to="." method="MouseEntered" binds= [-1]]
+[connection signal="mouse_exited" from="left_slow" to="." method="MouseLeft" binds= [-1]]
+[connection signal="mouse_entered" from="right_fast" to="." method="MouseEntered" binds= [2]]
+[connection signal="mouse_exited" from="right_fast" to="." method="MouseLeft" binds= [2]]
+[connection signal="mouse_entered" from="right_slow" to="." method="MouseEntered" binds= [1]]
+[connection signal="mouse_exited" from="right_slow" to="." method="MouseLeft" binds= [1]]

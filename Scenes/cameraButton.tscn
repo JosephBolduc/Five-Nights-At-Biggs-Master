@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://bq1ae1ed7kphb"]
+
+[ext_resource type="Texture2D" uid="uid://c66yeg25i2h5q" path="res://resource fin/ui/cam selector/room selected.png" id="1_eoq5v"]
+[ext_resource type="Script" path="res://Scripts/cameraButton.cs" id="1_pfv6y"]
+[ext_resource type="Texture2D" uid="uid://huqkcrh0qv6a" path="res://resource fin/ui/cam selector/room unselected.png" id="2_2crly"]
+[ext_resource type="FontFile" uid="uid://73am07db46vt" path="res://resource fin/fonts/pixeloid-font/PixeloidSansBold-PKnYd.ttf" id="3_x0ljt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_we6f6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_eoq5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2crly")
+}],
+"loop": true,
+"name": &"selected",
+"speed": 1.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2crly")
+}],
+"loop": true,
+"name": &"unselected",
+"speed": 0.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5hu0"]
+size = Vector2(61, 40)
+
+[node name="CameraButton" type="Node2D"]
+script = ExtResource("1_pfv6y")
+nodeName = "Default"
+
+[node name="Outline" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_we6f6")
+animation = &"unselected"
+autoplay = "unselected"
+
+[node name="Label" type="Label" parent="."]
+offset_left = -24.0
+offset_top = -17.0
+offset_right = 27.0
+offset_bottom = 20.0
+theme_override_fonts/font = ExtResource("3_x0ljt")
+theme_override_font_sizes/font_size = 11
+text = "CAM
+nX"
+vertical_alignment = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_u5hu0")
+debug_color = Color(0, 0.0156863, 0.207843, 0.235294)
+
+[connection signal="input_event" from="Area2D" to="." method="InputHandler"]
