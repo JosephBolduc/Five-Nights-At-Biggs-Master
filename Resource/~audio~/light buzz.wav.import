@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bcqq6u46ylujw"
+path="res://.godot/imported/light buzz.wav-73450be0216ce66aacbc5bb1158e301b.sample"
+
+[deps]
+
+source_file="res://resource fin/~audio~/light buzz.wav"
+dest_files=["res://.godot/imported/light buzz.wav-73450be0216ce66aacbc5bb1158e301b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
