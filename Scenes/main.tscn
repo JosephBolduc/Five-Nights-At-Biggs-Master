@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://c2yopxuj5hwtw"]
+[gd_scene load_steps=58 format=3 uid="uid://c2yopxuj5hwtw"]
 
 [ext_resource type="Texture2D" uid="uid://d2x4kwuh2643g" path="res://Resource/office/outage 0.png" id="1_c4ikh"]
 [ext_resource type="Script" path="res://Scripts/main_controller.cs" id="1_jsnq3"]
@@ -49,6 +49,8 @@
 [ext_resource type="Texture2D" uid="uid://bufba1eqp2onx" path="res://Resource/ui/cam selector/map.png" id="47_g2brn"]
 [ext_resource type="Script" path="res://Scripts/ButtonContainer.cs" id="48_3iypb"]
 [ext_resource type="PackedScene" uid="uid://bq1ae1ed7kphb" path="res://Scenes/cameraButton.tscn" id="48_ytb3p"]
+[ext_resource type="Script" path="res://Scripts/QuitPrompt.cs" id="50_petut"]
+[ext_resource type="FontFile" uid="uid://up5ix87mfp7d" path="res://Resource/fonts/easvhs.ttf" id="50_w1oca"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3xw4d"]
 animations = [{
@@ -392,6 +394,20 @@ text = "Pan: "
 
 [node name="Power Indicators" parent="UI" node_paths=PackedStringArray("tablet") instance=ExtResource("47_a2abd")]
 tablet = NodePath("../../Room/Tablet")
+
+[node name="Quit Prompt" type="Node2D" parent="UI" node_paths=PackedStringArray("quitPrompt")]
+script = ExtResource("50_petut")
+quitPrompt = NodePath("Quit Text")
+
+[node name="Quit Text" type="RichTextLabel" parent="UI/Quit Prompt"]
+offset_left = -628.0
+offset_top = -348.0
+offset_right = -192.0
+offset_bottom = -308.0
+theme_override_colors/default_color = Color(0.823529, 0.878431, 0, 1)
+theme_override_fonts/normal_font = ExtResource("50_w1oca")
+theme_override_font_sizes/normal_font_size = 30
+text = "Quitting "
 
 [node name="Camera" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
