@@ -15,7 +15,7 @@ public partial class QuitPrompt : Node2D
 		if (Input.IsActionPressed("quit"))
 		{
 			Show();
-			currentTime -= delta;
+			currentTime -= delta * 1.3;
 		}
 		else
 		{
