@@ -1,4 +1,5 @@
 using System.Linq;
+using FiveNightsAtPoobs.Scripts;
 using Godot;
 
 public partial class main_controller : Node2D
@@ -40,8 +41,17 @@ public partial class main_controller : Node2D
 	private Node2D tabletContents;
 	public Area2D tabletToggleButton;
 
+	// NOTE: instantiation must be delayed because of late references
+	public BotMovementController movementController;
+
 	// Debug stuff
 	private double timeSince;
+
+	// Text indicators for where the bots are
+	[ExportGroup("Debug text for the bots")]
+	[Export] RichTextLabel freddyLocation;
+	[Export] RichTextLabel bonnieLocation;
+	[Export] RichTextLabel chickenLocation;
 
 
 	public override void _Ready()
@@ -61,6 +71,8 @@ public partial class main_controller : Node2D
 		cameraButton stageCam = camButtons.buttonList.First(button => button.Name.Equals("1A"));
 		stageCam.outline.Play("selected");
 		stageCam.Active = true;
+
+		movementController = new(freddyLocation, bonnieLocation, chickenLocation);
 	}
 
 
@@ -68,7 +80,6 @@ public partial class main_controller : Node2D
 	{
 		// Time increment for misc things
 		timeSince += delta;
-		if (timeSince > .75) timeSince = 0;
 
 		// Toggles the monitor if space is pressed
 		// The other toggle is elsewhere in a display of bad practice
@@ -104,7 +115,16 @@ public partial class main_controller : Node2D
 		powerIndicators.UpdatePower(powerLeft);
 		powerIndicators.UpdateUsage(powerUsage);
 		//TODO decrease remaining power as a function of usage
-		
+
+		// Moves the bots around
+		if (timeSince > .5)
+		{
+			movementController.ProecssMovement();
+			GD.Print("moveing animatronics and studff");
+			timeSince = 0;
+		}
+
+
 		// Updated debug info on screen
 		monitorStateLabel.Text = $"Monitor State: {tablet.status}";
 		panLabel.Text = $"Pan: {panner.GetPanning()} \t BG Position: {room.GlobalPosition.X}";

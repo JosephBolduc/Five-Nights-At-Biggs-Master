@@ -19,6 +19,7 @@ config/tags=PackedStringArray("spooky")
 run/main_scene="res://Scenes/main.tscn"
 config/features=PackedStringArray("4.1", "C#", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
 boot_splash/image="res://logo1.png"
 boot_splash/fullsize=false
 config/icon="res://icon.webp"

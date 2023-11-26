@@ -247,11 +247,14 @@ animations = [{
 "speed": 19.0
 }]
 
-[node name="Main" type="Node2D" node_paths=PackedStringArray("camButtons", "doorControls", "powerIndicators")]
+[node name="Main" type="Node2D" node_paths=PackedStringArray("camButtons", "doorControls", "powerIndicators", "freddyLocation", "bonnieLocation", "chickenLocation")]
 script = ExtResource("1_jsnq3")
 camButtons = NodePath("UI/Tablet_Content/Camera Controls/Button Container")
 doorControls = NodePath("Room/Background/DoorAndButtons")
 powerIndicators = NodePath("UI/Power Indicators")
+freddyLocation = NodePath("UI/Debug Info/FreddyStatus")
+bonnieLocation = NodePath("UI/Debug Info/BonnieStatus")
+chickenLocation = NodePath("UI/Debug Info/ChikaStatus")
 
 [node name="Room" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
@@ -392,10 +395,32 @@ offset_right = -154.0
 offset_bottom = -306.0
 text = "Pan: "
 
+[node name="FreddyStatus" type="RichTextLabel" parent="UI/Debug Info"]
+offset_left = -639.0
+offset_top = -315.0
+offset_right = -154.0
+offset_bottom = -285.0
+text = "Freddy:"
+
+[node name="BonnieStatus" type="RichTextLabel" parent="UI/Debug Info"]
+offset_left = -639.0
+offset_top = -291.0
+offset_right = -154.0
+offset_bottom = -261.0
+text = "Bonnie: "
+
+[node name="ChikaStatus" type="RichTextLabel" parent="UI/Debug Info"]
+offset_left = -639.0
+offset_top = -270.0
+offset_right = -154.0
+offset_bottom = -240.0
+text = "Chika: "
+
 [node name="Power Indicators" parent="UI" node_paths=PackedStringArray("tablet") instance=ExtResource("47_a2abd")]
 tablet = NodePath("../../Room/Tablet")
 
 [node name="Quit Prompt" type="Node2D" parent="UI" node_paths=PackedStringArray("quitPrompt")]
+visible = false
 script = ExtResource("50_petut")
 quitPrompt = NodePath("Quit Text")
 
