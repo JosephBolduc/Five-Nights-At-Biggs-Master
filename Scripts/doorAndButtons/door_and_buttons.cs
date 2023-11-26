@@ -1,26 +1,25 @@
 using Godot;
-using System;
 
 public partial class door_and_buttons : Node
 {
-	private Area2D leftDoorButton;
-	private Area2D leftLightButton;
-	private Area2D rightDoorButton;
-	private Area2D rightLightButton;
+	private AudioStreamPlayer doorNoise;
 
 	private AnimatedSprite2D leftButton;
 	private AnimatedSprite2D leftDoor;
-	private AnimatedSprite2D rightButton;
-	private AnimatedSprite2D rightDoor;
-	
+	private Area2D leftDoorButton;
+
 	public bool leftDoorDown;
+	private Area2D leftLightButton;
 	public bool leftLightOn;
-	public bool rightDoorDown;
-	public bool rightLightOn;
 
 	private AudioStreamPlayer lightNoise;
-	private AudioStreamPlayer doorNoise;
-	
+	private AnimatedSprite2D rightButton;
+	private AnimatedSprite2D rightDoor;
+	private Area2D rightDoorButton;
+	public bool rightDoorDown;
+	private Area2D rightLightButton;
+	public bool rightLightOn;
+
 	public override void _Ready()
 	{
 		leftDoorButton = GetNode<Area2D>("Left_Buttons/door_button");
@@ -41,19 +40,22 @@ public partial class door_and_buttons : Node
 		};
 		doorNoise = GetNode<AudioStreamPlayer>("DoorPlayer");
 	}
+
 	public override void _Process(double delta)
 	{
 		if (!leftLightOn && !rightLightOn) lightNoise.StreamPaused = true;
 		ProcessSprites();
 	}
+
 	private void ButtonInputEvent(Node viewport, InputEvent @event, long shape_idx, long buttonId)
 	{
-		if (!(@event is InputEventMouseButton mbEvent && mbEvent.Pressed && mbEvent.ButtonIndex == MouseButton.Left)) return;
+		if (!(@event is InputEventMouseButton mbEvent && mbEvent.Pressed &&
+			  mbEvent.ButtonIndex == MouseButton.Left)) return;
 		switch (buttonId)
 		{
 			case 1:
 				leftDoorDown = !leftDoorDown;
-				if(leftDoorDown) leftDoor.Play();
+				if (leftDoorDown) leftDoor.Play();
 				else leftDoor.PlayBackwards();
 				doorNoise.Play();
 				break;
@@ -63,7 +65,7 @@ public partial class door_and_buttons : Node
 				break;
 			case 3:
 				rightDoorDown = !rightDoorDown;
-				if(rightDoorDown) rightDoor.Play();
+				if (rightDoorDown) rightDoor.Play();
 				else rightDoor.PlayBackwards();
 				doorNoise.Play();
 				break;
@@ -71,12 +73,12 @@ public partial class door_and_buttons : Node
 				rightLightOn = !rightLightOn;
 				lightNoise.Play();
 				break;
-		} 
+		}
 	}
 
 	private void ProcessSprites()
 	{
-		switch (leftDoorDown,leftLightOn)
+		switch (leftDoorDown, leftLightOn)
 		{
 			case (false, false):
 				leftButton.Play("none");
@@ -91,8 +93,8 @@ public partial class door_and_buttons : Node
 				leftButton.Play("both");
 				break;
 		}
-		
-		switch (rightDoorDown,rightLightOn)
+
+		switch (rightDoorDown, rightLightOn)
 		{
 			case (false, false):
 				rightButton.Play("none");

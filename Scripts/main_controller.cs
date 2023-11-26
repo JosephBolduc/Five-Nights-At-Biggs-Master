@@ -10,15 +10,26 @@ public partial class main_controller : Node2D
 		Office,
 		Cameras,
 		Blackout,
-		Scare,
+		Scare
 	}
+
+	[Export] private RichTextLabel bonnieLocation;
 
 	// Camera control things
 	[Export] private ButtonContainer camButtons;
+	[Export] private RichTextLabel chickenLocation;
 
 	// Door control things
 	[Export] private door_and_buttons doorControls;
+
+	// Text indicators for where the bots are
+	[ExportGroup("Debug text for the bots")] [Export]
+	private RichTextLabel freddyLocation;
+
 	private RichTextLabel monitorStateLabel;
+
+	// NOTE: instantiation must be delayed because of late references
+	public BotMovementController movementController;
 	private RichTextLabel panLabel;
 
 
@@ -41,17 +52,8 @@ public partial class main_controller : Node2D
 	private Node2D tabletContents;
 	public Area2D tabletToggleButton;
 
-	// NOTE: instantiation must be delayed because of late references
-	public BotMovementController movementController;
-
 	// Debug stuff
 	private double timeSince;
-
-	// Text indicators for where the bots are
-	[ExportGroup("Debug text for the bots")]
-	[Export] RichTextLabel freddyLocation;
-	[Export] RichTextLabel bonnieLocation;
-	[Export] RichTextLabel chickenLocation;
 
 
 	public override void _Ready()
@@ -72,7 +74,7 @@ public partial class main_controller : Node2D
 		stageCam.outline.Play("selected");
 		stageCam.Active = true;
 
-		movementController = new(freddyLocation, bonnieLocation, chickenLocation);
+		movementController = new BotMovementController(freddyLocation, bonnieLocation, chickenLocation);
 	}
 
 

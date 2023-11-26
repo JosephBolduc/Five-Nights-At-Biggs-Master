@@ -1,24 +1,23 @@
 using Godot;
-using System;
 
 public partial class panning_zones : Node
 {
 	private bool farLeftActive;
+	private bool farRightActive;
 	private bool leftActive;
 	private bool rightActive;
-	private bool farRightActive;
-	
+
 	// Returns -2 to 2 depending on if far left to far right zones are active
 	public int GetPanning()
 	{
-		int value = 0;
+		var value = 0;
 		if (farLeftActive) value -= 4;
 		if (leftActive) value -= 1;
 		if (rightActive) value += 1;
 		if (farRightActive) value += 4;
 		return value;
 	}
-	
+
 	// Far left to right ids as -2 to 2
 	private void MouseEntered(long id)
 	{

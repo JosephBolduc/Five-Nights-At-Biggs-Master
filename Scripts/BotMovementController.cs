@@ -1,13 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Numerics;
 using Godot;
 
 namespace FiveNightsAtPoobs.Scripts;
 
 public class BotMovementController
 {
+	private readonly Location Five = new("5");
+	private readonly Location FourA = new("4A");
+	private readonly Location FourB = new("4B");
+
+	private readonly Location LeftDoor = new("Left Door");
+
 	// Defining where each bot can be, poorly
 	private readonly Location OneA = new("1A");
 	private readonly Location OneB = new("1B");
@@ -18,23 +22,19 @@ public class BotMovementController
 	private readonly Location Three = new("3");
 	private readonly Location TwoA = new("2A");
 	private readonly Location TwoB = new("2B");
-	private readonly Location Five = new("5");
-	private readonly Location FourA = new("4A");
-	private readonly Location FourB = new("4B");
-	private readonly Location LeftDoor = new("Left Door");
+	private readonly Robot bonnie;
+	private readonly RichTextLabel bonnieLocation;
+	private readonly RichTextLabel chickenLocation;
+	private readonly Robot chika;
 
 	// The robots
-	Robot fredbear;
-	Robot bonnie;
-	Robot chika;
+	private readonly Robot fredbear;
 
 	// Have foxy do stuff down here idk
 	// TODO: foxy
 
 	// Text indicators for where the bots are
-	RichTextLabel freddyLocation;
-	RichTextLabel bonnieLocation;
-	RichTextLabel chickenLocation;
+	private readonly RichTextLabel freddyLocation;
 
 	public BotMovementController(RichTextLabel fLabel, RichTextLabel bLabel, RichTextLabel cLabel)
 	{
@@ -44,16 +44,16 @@ public class BotMovementController
 		chickenLocation = cLabel;
 
 		OneA.AddAdjacentcy(new[] { OneB });
-		OneB.AddAdjacentcy(new[] {Five, Seven, Six, Three, TwoA, FourA});
-		TwoA.AddAdjacentcy(new[] {Three, LeftDoor, TwoB});
-		TwoB.AddAdjacentcy(new []{LeftDoor});
-		FourA.AddAdjacentcy(new []{FourB, RightDoor});
-		FourB.AddAdjacentcy(new []{RightDoor});
+		OneB.AddAdjacentcy(new[] { Five, Seven, Six, Three, TwoA, FourA });
+		TwoA.AddAdjacentcy(new[] { Three, LeftDoor, TwoB });
+		TwoB.AddAdjacentcy(new[] { LeftDoor });
+		FourA.AddAdjacentcy(new[] { FourB, RightDoor });
+		FourB.AddAdjacentcy(new[] { RightDoor });
 
 
-		fredbear = new(OneA, new[] { OneB, OneC, Seven, FourA, FourB, RightDoor });
-		bonnie = new(OneA, new[] { OneB, OneC, Three, TwoA, TwoB, LeftDoor });
-		chika = new(OneA, new[] { OneB, OneC, Six, FourA, FourB, RightDoor });
+		fredbear = new Robot(OneA, new[] { OneB, OneC, Seven, FourA, FourB, RightDoor });
+		bonnie = new Robot(OneA, new[] { OneB, OneC, Three, TwoA, TwoB, LeftDoor });
+		chika = new Robot(OneA, new[] { OneB, OneC, Six, FourA, FourB, RightDoor });
 	}
 
 	public void ProecssMovement()
@@ -67,15 +67,16 @@ public class BotMovementController
 	}
 
 	/// <summary>
-	/// A representation of the animatronic robots, excluding foxy.
-	/// Maintains location by reference to the Location graph
+	///     A representation of the animatronic robots, excluding foxy.
+	///     Maintains location by reference to the Location graph
 	/// </summary>
 	public class Robot
 	{
 		// The collection of all the instantiated locations
 		public static readonly List<Robot> Robots = new();
-		public List<Location> allowedLocations = new();     // Where the bot can roam to
-		public Location currentLocation;                    // Current location, initialized onstage A1
+		public List<Location> allowedLocations = new(); // Where the bot can roam to
+		public Location currentLocation; // Current location, initialized onstage A1
+
 		public Robot(Location startingSpot, IEnumerable<Location> possibleLocations)
 		{
 			Robots.Add(this);
@@ -85,27 +86,24 @@ public class BotMovementController
 		}
 
 		/// <summary>
-		/// Moves to bot to an available location, if available, otherwise nothing.
-		/// Deal with randomness and movement rates before calling
+		///     Moves to bot to an available location, if available, otherwise nothing.
+		///     Deal with randomness and movement rates before calling
 		/// </summary>
 		public void Move()
 		{
-			List<Location> possibleLocations = allowedLocations.Where((spot) =>
-			{
-				if (!currentLocation.Adjacencies.Contains(spot)) return false;
-				foreach (var robot in Robots)
+			List<Location> possibleLocations = allowedLocations.Where(spot =>
 				{
-					if (robot.currentLocation == spot) return false;
+					if (!currentLocation.Adjacencies.Contains(spot)) return false;
+					foreach (Robot robot in Robots)
+						if (robot.currentLocation == spot)
+							return false;
+					return true;
 				}
-				return true;
-			}
 			).ToList();
 			if (possibleLocations.Count == 0) return;
 			Location target = possibleLocations[(int)(GD.Randi() % possibleLocations.Count)];
 			currentLocation = target;
 		}
-
-		
 	}
 
 

@@ -1,5 +1,5 @@
-using Godot;
 using System;
+using Godot;
 
 public partial class Tablet : AnimatedSprite2D
 {
@@ -8,11 +8,12 @@ public partial class Tablet : AnimatedSprite2D
 		Down,
 		Raising,
 		Lowering,
-		Up,
+		Up
 	}
 
-	public MonitorStatus status = MonitorStatus.Down;
 	private AudioStreamPlayer noise;
+
+	public MonitorStatus status = MonitorStatus.Down;
 
 	public override void _Ready()
 	{
