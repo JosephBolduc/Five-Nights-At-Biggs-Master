@@ -61,6 +61,7 @@ public partial class door_and_buttons : Node
 				break;
 			case 2:
 				leftLightOn = !leftLightOn;
+				if (leftLightOn) rightLightOn = false;
 				lightNoise.Play();
 				break;
 			case 3:
@@ -71,6 +72,7 @@ public partial class door_and_buttons : Node
 				break;
 			case 4:
 				rightLightOn = !rightLightOn;
+				if (rightLightOn) leftLightOn = false;
 				lightNoise.Play();
 				break;
 		}

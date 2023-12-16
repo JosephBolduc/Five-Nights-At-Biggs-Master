@@ -12,19 +12,19 @@ public partial class main_controller : Node2D
 		Blackout,
 		Scare
 	}
-
-	[Export] private RichTextLabel bonnieLocation;
-
+	
 	// Camera control things
 	[Export] private ButtonContainer camButtons;
-	[Export] private RichTextLabel chickenLocation;
 
 	// Door control things
 	[Export] private door_and_buttons doorControls;
 
 	// Text indicators for where the bots are
-	[ExportGroup("Debug text for the bots")] [Export]
-	private RichTextLabel freddyLocation;
+	[ExportGroup("Debug text for the bots")]
+	[Export] private RichTextLabel freddyLocation;
+	[Export] private RichTextLabel chickenLocation;
+	[Export] private RichTextLabel bonnieLocation;
+	[Export] private RichTextLabel foxyLocation;
 
 	private RichTextLabel monitorStateLabel;
 
@@ -74,7 +74,7 @@ public partial class main_controller : Node2D
 		stageCam.outline.Play("selected");
 		stageCam.Active = true;
 
-		movementController = new BotMovementController(freddyLocation, bonnieLocation, chickenLocation);
+		movementController = new BotMovementController(freddyLocation, bonnieLocation, chickenLocation, foxyLocation);
 	}
 
 

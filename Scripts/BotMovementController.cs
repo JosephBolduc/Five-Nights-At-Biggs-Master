@@ -6,54 +6,65 @@ namespace FiveNightsAtPoobs.Scripts;
 
 public class BotMovementController
 {
-	private readonly Location Five = new("5");
-	private readonly Location FourA = new("4A");
-	private readonly Location FourB = new("4B");
 
-	private readonly Location LeftDoor = new("Left Door");
 
 	// Defining where each bot can be, poorly
-	private readonly Location OneA = new("1A");
-	private readonly Location OneB = new("1B");
-	private readonly Location OneC = new("1C");
-	private readonly Location RightDoor = new("Right Door");
-	private readonly Location Seven = new("7");
-	private readonly Location Six = new("6");
-	private readonly Location Three = new("3");
-	private readonly Location TwoA = new("2A");
-	private readonly Location TwoB = new("2B");
-	private readonly Robot bonnie;
-	private readonly RichTextLabel bonnieLocation;
-	private readonly RichTextLabel chickenLocation;
-	private readonly Robot chika;
+	private readonly Location oneA = new("1A");
+	private readonly Location oneB = new("1B");
+	private readonly Location oneC = new("1C");
+	private readonly Location twoA = new("2A");
+	private readonly Location twoB = new("2B");
+	private readonly Location leftDoor = new("Left Door");
+	private readonly Location three = new("3");
+	private readonly Location fourA = new("4A");
+	private readonly Location fourB = new("4B");
+	private readonly Location rightDoor = new("Right Door");
+	private readonly Location five = new("5");
+	private readonly Location six = new("6");
+	private readonly Location seven = new("7");
 
 	// The robots
 	private readonly Robot fredbear;
-
-	// Have foxy do stuff down here idk
-	// TODO: foxy
+	private readonly Robot bonnie;
+	private readonly Robot chika;
+	private readonly Robot foxy;
 
 	// Text indicators for where the bots are
 	private readonly RichTextLabel freddyLocation;
+	private readonly RichTextLabel bonnieLocation;
+	private readonly RichTextLabel chickenLocation;
+	private readonly RichTextLabel foxLocation;
 
-	public BotMovementController(RichTextLabel fLabel, RichTextLabel bLabel, RichTextLabel cLabel)
+
+	public BotMovementController(RichTextLabel fLabel, RichTextLabel bLabel, RichTextLabel cLabel, RichTextLabel foxLabel)
 	{
 		// Initializing the text label fields
 		freddyLocation = fLabel;
 		bonnieLocation = bLabel;
 		chickenLocation = cLabel;
+		foxLocation = foxLabel;
 
-		OneA.AddAdjacentcy(new[] { OneB });
-		OneB.AddAdjacentcy(new[] { Five, Seven, Six, Three, TwoA, FourA });
-		TwoA.AddAdjacentcy(new[] { Three, LeftDoor, TwoB });
-		TwoB.AddAdjacentcy(new[] { LeftDoor });
-		FourA.AddAdjacentcy(new[] { FourB, RightDoor });
-		FourB.AddAdjacentcy(new[] { RightDoor });
-
-
-		fredbear = new Robot(OneA, new[] { OneB, OneC, Seven, FourA, FourB, RightDoor });
-		bonnie = new Robot(OneA, new[] { OneB, OneC, Three, TwoA, TwoB, LeftDoor });
-		chika = new Robot(OneA, new[] { OneB, OneC, Six, FourA, FourB, RightDoor });
+		// Initializing location links
+		oneA.AddAdjacentcy(new []{oneB});
+		oneB.AddAdjacentcy(new []{oneA, five, twoA, fourA, seven, six, three});
+		oneC.AddAdjacentcy(new []{twoA});
+		// Bots are locked into moving between hall and pocket or attacking, no symmetric link
+		twoA.AddAdjacentcy(new []{twoB, leftDoor});
+		twoB.AddAdjacentcy(new []{twoA, leftDoor});
+		leftDoor.AddAdjacentcy(new []{oneA, oneB, oneC});
+		three.AddAdjacentcy(new []{oneB, twoA});
+		fourA.AddAdjacentcy(new []{fourA, rightDoor});
+		fourB.AddAdjacentcy(new []{fourB, rightDoor});
+		rightDoor.AddAdjacentcy(new []{oneA, oneB, oneC});
+		five.AddAdjacentcy(new []{oneB});
+		six.AddAdjacentcy(new []{oneB, fourA});
+		seven.AddAdjacentcy(new []{oneB, fourA});
+		
+		// Initializing the bots and their starting and allowed locations
+		fredbear = new Robot(oneA, new[] { oneB, seven, fourA, fourB, rightDoor }, Robot.BotID.Honk);
+		bonnie = new Robot(oneA, new[] { oneB, three, twoA, twoB, leftDoor }, Robot.BotID.Snas);
+		chika = new Robot(oneA, new[] { oneB, six, fourA, fourB, rightDoor }, Robot.BotID.Yasu);
+		foxy = new Robot(oneC, new[] { twoA, twoB, leftDoor }, Robot.BotID.Amm);
 	}
 
 	public void ProecssMovement()
@@ -64,6 +75,8 @@ public class BotMovementController
 		bonnieLocation.Text = $"Bonnie: {bonnie.currentLocation.Name}";
 		chika.Move();
 		chickenLocation.Text = $"Chika: {chika.currentLocation.Name}";
+		foxy.Move();
+		foxLocation.Text = $"Foxy: {foxy.currentLocation.Name}";
 	}
 
 	/// <summary>
@@ -76,8 +89,17 @@ public class BotMovementController
 		public static readonly List<Robot> Robots = new();
 		public List<Location> allowedLocations = new(); // Where the bot can roam to
 		public Location currentLocation; // Current location, initialized onstage A1
+		public BotID BotId;
 
-		public Robot(Location startingSpot, IEnumerable<Location> possibleLocations)
+		public enum BotID
+		{
+			Snas,
+			Yasu,
+			Honk,
+			Amm
+		}
+
+		public Robot(Location startingSpot, IEnumerable<Location> possibleLocations, BotID id)
 		{
 			Robots.Add(this);
 			currentLocation = startingSpot;
@@ -130,7 +152,8 @@ public class BotMovementController
 			foreach (Location loc in itemList)
 			{
 				Adjacencies.Add(loc);
-				loc.Adjacencies.Add(this);
+				// Not making the links symetric
+				// loc.Adjacencies.Add(this);
 			}
 		}
 	}

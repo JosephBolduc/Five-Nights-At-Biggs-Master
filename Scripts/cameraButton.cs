@@ -1,14 +1,19 @@
 using System.Collections.Generic;
+using FiveNightsAtPoobs.Scripts;
+using FiveNightsAtPoobs.Scripts.tablet_cameras;
 using Godot;
 
 public partial class cameraButton : Node2D
 {
 	private static List<cameraButton> buddies;
 	private Label label;
+	
 	[Export] private string nodeName;
+	
 	public AnimatedSprite2D outline;
 	public bool Active { set; get; }
-
+	public ITabletViewable TabletView;
+	
 	public override void _Ready()
 	{
 		if (buddies == null) buddies = new List<cameraButton>();
@@ -16,8 +21,9 @@ public partial class cameraButton : Node2D
 		outline = GetNode<AnimatedSprite2D>("Outline");
 		label = GetNode<Label>("Label");
 		label.Text = $"CAM\n{nodeName}";
+		TabletView = GetNode<Node2D>("ViewManager") as ITabletViewable;
 	}
-
+	
 
 	private void InputHandler(Node viewport, InputEvent @event, long shape_idx)
 	{

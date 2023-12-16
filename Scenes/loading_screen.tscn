@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b0av3fl8ulkaw"]
+
+[node name="Loading Screen" type="Node2D"]
+
+[node name="Camera" type="Camera2D" parent="."]
+
+[node name="Logo List" type="Node2D" parent="."]

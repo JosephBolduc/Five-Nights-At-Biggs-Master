@@ -1,20 +1,32 @@
-[gd_scene load_steps=58 format=3 uid="uid://c2yopxuj5hwtw"]
+[gd_scene load_steps=80 format=3 uid="uid://c2yopxuj5hwtw"]
 
 [ext_resource type="Texture2D" uid="uid://d2x4kwuh2643g" path="res://Resource/office/outage 0.png" id="1_c4ikh"]
 [ext_resource type="Script" path="res://Scripts/main_controller.cs" id="1_jsnq3"]
+[ext_resource type="Script" path="res://Scripts/Background.cs" id="2_wd70l"]
 [ext_resource type="Texture2D" uid="uid://qj8cxwjdmhg6" path="res://Resource/office/outage 1.png" id="2_xs5gh"]
 [ext_resource type="Texture2D" uid="uid://1py726jikpnq" path="res://Resource/office/left armed.png" id="3_a04nl"]
+[ext_resource type="Texture2D" uid="uid://tn6kekmu1fsk" path="res://Resource/office/office final/background.png" id="3_tpqjo"]
+[ext_resource type="Texture2D" uid="uid://dmnrnf55t7hl" path="res://Resource/office/outage hank.png" id="4_u4hth"]
 [ext_resource type="Texture2D" uid="uid://ho21omr4r7kp" path="res://Resource/office/left light.png" id="4_vqun4"]
 [ext_resource type="Texture2D" uid="uid://dhgcwawbvdkku" path="res://Resource/office/neutral.png" id="5_8a60x"]
 [ext_resource type="Texture2D" uid="uid://qmwgi2q033c1" path="res://Resource/office/right armed.png" id="6_a5c8w"]
 [ext_resource type="Texture2D" uid="uid://cqtsecue1cvwi" path="res://Resource/office/right light.png" id="7_hnq0l"]
 [ext_resource type="Texture2D" uid="uid://bh7sx3xy6rt5p" path="res://Resource/office/fan/1.png" id="8_gtq45"]
+[ext_resource type="Texture2D" uid="uid://cmefwiswi8adh" path="res://Resource/office/office final/both.png" id="9_80tna"]
 [ext_resource type="Texture2D" uid="uid://b1upwflgawkty" path="res://Resource/office/fan/2.png" id="9_awf6f"]
 [ext_resource type="Texture2D" uid="uid://ce62ro5pqtnl8" path="res://Resource/office/fan/3.png" id="10_81fwi"]
+[ext_resource type="Texture2D" uid="uid://70fhy6ylm4o5" path="res://Resource/office/office final/neutral.png" id="10_qt5vf"]
+[ext_resource type="Texture2D" uid="uid://dlia327vu3t8x" path="res://Resource/office/amm.png" id="10_yme6w"]
+[ext_resource type="Script" path="res://Scripts/ArmedController.cs" id="11_868rl"]
+[ext_resource type="Texture2D" uid="uid://xe3io6crx5vc" path="res://Resource/office/yasu.png" id="11_cucux"]
+[ext_resource type="Texture2D" uid="uid://cn63b2cfbay76" path="res://Resource/office/office final/left on.png" id="11_f4dg1"]
+[ext_resource type="Texture2D" uid="uid://bhmxq7hqsrmnd" path="res://Resource/office/hank.png" id="12_4ng0p"]
 [ext_resource type="Script" path="res://Scripts/Fan.cs" id="12_i7npr"]
+[ext_resource type="Texture2D" uid="uid://dl5sjlcve1n4y" path="res://Resource/office/office final/right on.png" id="12_p3fa3"]
 [ext_resource type="Texture2D" uid="uid://tl1q7rqgj515" path="res://Resource/tablet/1.png" id="12_q6mq3"]
 [ext_resource type="Texture2D" uid="uid://rlpkwsi2d0e6" path="res://Resource/tablet/2.png" id="13_7xmow"]
 [ext_resource type="PackedScene" uid="uid://bpsha8fcvcpan" path="res://Scenes/door_and_buttons.tscn" id="13_epcp2"]
+[ext_resource type="Texture2D" uid="uid://kjjbhs2l828e" path="res://Resource/office/snaspeek.png" id="13_rk0eu"]
 [ext_resource type="Texture2D" uid="uid://shdelrk7ltxt" path="res://Resource/tablet/3.png" id="14_y7aw4"]
 [ext_resource type="Texture2D" uid="uid://bdhpu2bensiaf" path="res://Resource/tablet/4.png" id="15_le51d"]
 [ext_resource type="Texture2D" uid="uid://bt0p386s5kfmu" path="res://Resource/tablet/5.png" id="16_xqgrm"]
@@ -45,12 +57,56 @@
 [ext_resource type="Texture2D" uid="uid://dl1fousqxmesq" path="res://Resource/static effects/full static/18.png" id="44_is2tm"]
 [ext_resource type="Texture2D" uid="uid://k70f4th7jd8v" path="res://Resource/static effects/full static/20.png" id="45_xqb06"]
 [ext_resource type="Texture2D" uid="uid://bbkqujx4skhh4" path="res://Resource/ui/tablet border.png" id="46_8i847"]
+[ext_resource type="Script" path="res://Scripts/tablet cameras/GenericViewManager.cs" id="46_285u2"]
 [ext_resource type="PackedScene" uid="uid://dbji43djqyhos" path="res://Scenes/powerIndicators.tscn" id="47_a2abd"]
 [ext_resource type="Texture2D" uid="uid://bufba1eqp2onx" path="res://Resource/ui/cam selector/map.png" id="47_g2brn"]
+[ext_resource type="Texture2D" uid="uid://chjhkkmrrlf4t" path="res://Resource/stage/1.png" id="47_sq5yv"]
 [ext_resource type="Script" path="res://Scripts/ButtonContainer.cs" id="48_3iypb"]
+[ext_resource type="Texture2D" uid="uid://b7xqjel3lh5iw" path="res://Resource/stage/2.png" id="48_o6syc"]
 [ext_resource type="PackedScene" uid="uid://bq1ae1ed7kphb" path="res://Scenes/cameraButton.tscn" id="48_ytb3p"]
+[ext_resource type="Texture2D" uid="uid://fehq1wmhlhrs" path="res://Resource/stage/3.png" id="49_ls716"]
+[ext_resource type="Texture2D" uid="uid://dwmvf0wkpopey" path="res://Resource/stage/12.png" id="50_6rb8n"]
 [ext_resource type="Script" path="res://Scripts/QuitPrompt.cs" id="50_petut"]
 [ext_resource type="FontFile" uid="uid://up5ix87mfp7d" path="res://Resource/fonts/easvhs.ttf" id="50_w1oca"]
+[ext_resource type="Texture2D" uid="uid://bccuqtdemyeyd" path="res://Resource/stage/13.png" id="51_i7xaq"]
+[ext_resource type="Texture2D" uid="uid://o4mwyhqxyor7" path="res://Resource/stage/23.png" id="52_foome"]
+[ext_resource type="Texture2D" uid="uid://dssobficg3kgb" path="res://Resource/stage/123.png" id="53_3rb5q"]
+[ext_resource type="Texture2D" uid="uid://dh63awjehxgm7" path="res://Resource/stage/empty.png" id="61_4uanf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v3on5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_80tna")
+}],
+"loop": true,
+"name": &"both",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_qt5vf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_f4dg1")
+}],
+"loop": true,
+"name": &"left",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_p3fa3")
+}],
+"loop": true,
+"name": &"right",
+"speed": 1.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3xw4d"]
 animations = [{
@@ -68,6 +124,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"dark_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_u4hth")
+}],
+"loop": true,
+"name": &"hank_dark",
 "speed": 5.0
 }, {
 "frames": [{
@@ -247,24 +311,51 @@ animations = [{
 "speed": 19.0
 }]
 
-[node name="Main" type="Node2D" node_paths=PackedStringArray("camButtons", "doorControls", "powerIndicators", "freddyLocation", "bonnieLocation", "chickenLocation")]
+[node name="Main" type="Node2D" node_paths=PackedStringArray("camButtons", "doorControls", "freddyLocation", "chickenLocation", "bonnieLocation", "foxyLocation", "powerIndicators")]
 script = ExtResource("1_jsnq3")
 camButtons = NodePath("UI/Tablet_Content/Camera Controls/Button Container")
 doorControls = NodePath("Room/Background/DoorAndButtons")
-powerIndicators = NodePath("UI/Power Indicators")
 freddyLocation = NodePath("UI/Debug Info/FreddyStatus")
-bonnieLocation = NodePath("UI/Debug Info/BonnieStatus")
 chickenLocation = NodePath("UI/Debug Info/ChikaStatus")
+bonnieLocation = NodePath("UI/Debug Info/BonnieStatus")
+foxyLocation = NodePath("UI/Debug Info/FoxyStatus")
+powerIndicators = NodePath("UI/Power Indicators")
 
 [node name="Room" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
 [node name="Background" type="Node2D" parent="Room"]
+script = ExtResource("2_wd70l")
 
-[node name="Background" type="AnimatedSprite2D" parent="Room/Background"]
+[node name="Background" type="Sprite2D" parent="Room/Background"]
+texture = ExtResource("3_tpqjo")
+
+[node name="ArmedController" type="Node2D" parent="Room/Background"]
+script = ExtResource("11_868rl")
+
+[node name="amm" type="Sprite2D" parent="Room/Background/ArmedController"]
+visible = false
+texture = ExtResource("10_yme6w")
+
+[node name="yasu" type="Sprite2D" parent="Room/Background/ArmedController"]
+visible = false
+texture = ExtResource("11_cucux")
+
+[node name="honk" type="Sprite2D" parent="Room/Background/ArmedController"]
+visible = false
+texture = ExtResource("12_4ng0p")
+
+[node name="snas" type="Sprite2D" parent="Room/Background/ArmedController"]
+texture = ExtResource("13_rk0eu")
+
+[node name="Foreground" type="AnimatedSprite2D" parent="Room/Background"]
+sprite_frames = SubResource("SpriteFrames_v3on5")
+
+[node name="background OLD" type="AnimatedSprite2D" parent="Room/Background"]
+visible = false
 sprite_frames = SubResource("SpriteFrames_3xw4d")
-animation = &"neutral"
+animation = &"right_light"
 
 [node name="Fan" type="AnimatedSprite2D" parent="Room/Background"]
 position = Vector2(48.315, 41.7324)
@@ -307,30 +398,8 @@ stream = ExtResource("28_ef7je")
 max_polyphony = 3
 
 [node name="Tablet_Content" type="Node2D" parent="UI"]
-visible = false
-
-[node name="Quick_Static" type="AnimatedSprite2D" parent="UI/Tablet_Content"]
-sprite_frames = SubResource("SpriteFrames_a4gm3")
-frame = 6
-frame_progress = 1.0
-metadata/_edit_lock_ = true
-
-[node name="Long_Static" type="AnimatedSprite2D" parent="UI/Tablet_Content"]
-modulate = Color(1, 1, 1, 0.0980392)
-sprite_frames = SubResource("SpriteFrames_mv4ya")
-autoplay = "default"
-frame_progress = 0.605388
-metadata/_edit_lock_ = true
-
-[node name="Camera_Border" type="Sprite2D" parent="UI/Tablet_Content"]
-texture = ExtResource("46_8i847")
-metadata/_edit_lock_ = true
 
 [node name="Camera Controls" type="Node2D" parent="UI/Tablet_Content"]
-
-[node name="Map" type="Sprite2D" parent="UI/Tablet_Content/Camera Controls"]
-position = Vector2(410, 139)
-texture = ExtResource("47_g2brn")
 
 [node name="Button Container" type="Node2D" parent="UI/Tablet_Content/Camera Controls"]
 script = ExtResource("48_3iypb")
@@ -338,6 +407,55 @@ script = ExtResource("48_3iypb")
 [node name="1A" parent="UI/Tablet_Content/Camera Controls/Button Container" instance=ExtResource("48_ytb3p")]
 position = Vector2(348, -19)
 nodeName = "1A"
+
+[node name="ViewManager" type="Node2D" parent="UI/Tablet_Content/Camera Controls/Button Container/1A" node_paths=PackedStringArray("snas", "yasu", "honk", "empty")]
+script = ExtResource("46_285u2")
+supportsSnas = true
+supportsYasu = true
+supportsHonk = true
+snas = NodePath("snas")
+yasu = NodePath("yasu")
+honk = NodePath("honk")
+empty = NodePath("empty")
+
+[node name="yasu" type="Sprite2D" parent="UI/Tablet_Content/Camera Controls/Button Container/1A/ViewManager"]
+visible = false
+position = Vector2(-348, 19)
+texture = ExtResource("48_o6syc")
+
+[node name="empty" type="Sprite2D" parent="UI/Tablet_Content/Camera Controls/Button Container/1A/ViewManager"]
+position = Vector2(-348, 19)
+texture = ExtResource("61_4uanf")
+
+[node name="snas" type="Sprite2D" parent="UI/Tablet_Content/Camera Controls/Button Container/1A/ViewManager"]
+visible = false
+position = Vector2(-348, 19)
+texture = ExtResource("47_sq5yv")
+
+[node name="honk" type="Sprite2D" parent="UI/Tablet_Content/Camera Controls/Button Container/1A/ViewManager"]
+visible = false
+position = Vector2(-348, 19)
+texture = ExtResource("49_ls716")
+
+[node name="snasyasu" type="Sprite2D" parent="UI/Tablet_Content/Camera Controls/Button Container/1A/ViewManager"]
+visible = false
+position = Vector2(-348, 18)
+texture = ExtResource("50_6rb8n")
+
+[node name="snashank" type="Sprite2D" parent="UI/Tablet_Content/Camera Controls/Button Container/1A/ViewManager"]
+visible = false
+position = Vector2(-348, 19)
+texture = ExtResource("51_i7xaq")
+
+[node name="yasuhank" type="Sprite2D" parent="UI/Tablet_Content/Camera Controls/Button Container/1A/ViewManager"]
+visible = false
+position = Vector2(-348, 19)
+texture = ExtResource("52_foome")
+
+[node name="all" type="Sprite2D" parent="UI/Tablet_Content/Camera Controls/Button Container/1A/ViewManager"]
+visible = false
+position = Vector2(-348, 19)
+texture = ExtResource("53_3rb5q")
 
 [node name="1B" parent="UI/Tablet_Content/Camera Controls/Button Container" instance=ExtResource("48_ytb3p")]
 position = Vector2(324, 35)
@@ -379,6 +497,27 @@ nodeName = "6"
 position = Vector2(556, 62)
 nodeName = "7"
 
+[node name="Map" type="Sprite2D" parent="UI/Tablet_Content/Camera Controls"]
+position = Vector2(410, 139)
+texture = ExtResource("47_g2brn")
+
+[node name="Quick_Static" type="AnimatedSprite2D" parent="UI/Tablet_Content"]
+sprite_frames = SubResource("SpriteFrames_a4gm3")
+frame = 6
+frame_progress = 1.0
+metadata/_edit_lock_ = true
+
+[node name="Long_Static" type="AnimatedSprite2D" parent="UI/Tablet_Content"]
+modulate = Color(1, 1, 1, 0.0980392)
+sprite_frames = SubResource("SpriteFrames_mv4ya")
+autoplay = "default"
+frame_progress = 0.605388
+metadata/_edit_lock_ = true
+
+[node name="Camera_Border" type="Sprite2D" parent="UI/Tablet_Content"]
+texture = ExtResource("46_8i847")
+metadata/_edit_lock_ = true
+
 [node name="Debug Info" type="Node2D" parent="UI"]
 
 [node name="MonitorState" type="RichTextLabel" parent="UI/Debug Info"]
@@ -415,6 +554,13 @@ offset_top = -270.0
 offset_right = -154.0
 offset_bottom = -240.0
 text = "Chika: "
+
+[node name="FoxyStatus" type="RichTextLabel" parent="UI/Debug Info"]
+offset_left = -639.0
+offset_top = -246.0
+offset_right = -154.0
+offset_bottom = -216.0
+text = "Foxy:"
 
 [node name="Power Indicators" parent="UI" node_paths=PackedStringArray("tablet") instance=ExtResource("47_a2abd")]
 tablet = NodePath("../../Room/Tablet")
